@@ -1,4 +1,4 @@
-# Textual-Brain-Encoding-and-Decoding 
+# Textual-Brain-Encoding-and-Decoding (FMRI Image analysis and NLP)
 The brain encoding problem aims to automatically generate fMRI brain representations given a stimulus. The brain decoding problem is the inverse problem of reconstructing the stimuli given the fMRI brain representation. In this task we would be constructing an encoder as well as a decoder for textual stimuli. Textual stimuli is processed through the conepts of NLP sentence represetnations. 
 <br><br>
 We need to build 4 encoder and 4 decoders for each region of brain explained in the bottom of this read.me, for each participant(2). Using sentence representation like BERT CLS, BERT Pooled, and GloVe. So we can say:- <br>
