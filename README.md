@@ -1,42 +1,42 @@
-# Textual-Brain-Encoding-and-Decoding (FMRI Image analysis and NLP)
-The brain encoding problem aims to automatically generate fMRI brain representations given a stimulus. The brain decoding problem is the inverse problem of reconstructing the stimuli given the fMRI brain representation. In this task we would be constructing an encoder as well as a decoder for textual stimuli. Textual stimuli is processed through the conepts of NLP sentence represetnations. 
-<br><br>
-We need to build 4 encoder and 4 decoders for each region of brain explained in the bottom of this read.me, for each participant(2). Using sentence representation like BERT CLS, BERT Pooled, and GloVe. So we can say:- <br>
-We have used <strong>Ridge regression model</strong> to create encoders and decodes for the given FMRI dataset. <em><strong>3 different sentence representations are used : BERT CLS, BERT Pooled and GloVe</strong></em>. 2 Participants x 4 ROI FMRIs x 3 Sentence representations x 2 (Decoder and Encoder model) = 48
-<br>
-So, a total of <strong>48 models</strong> were trained. We obtained the above given plots for <strong>2v2 accuracy and
-Pearson’s Correlation</strong> computed for each model using the following formulae.  Damn that's a lot of models!!!
-<br>
-![image](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/48ce7c00-ff30-4991-b913-c6dbd992b90d)
+# Textual Brain Encoding and Decoding (fMRI Image Analysis and NLP)
 
+This project explores the brain encoding and decoding tasks using fMRI data and textual stimuli. The goal of **brain encoding** is to generate fMRI brain representations given a textual stimulus, while **brain decoding** involves reconstructing the original textual stimuli from fMRI data. We developed both encoders and decoders for textual stimuli using NLP sentence representations.
 
-![image](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/05c82ee1-3817-47d8-9dbf-20462087369e)
+## Project Overview
+For this study, we built **4 encoders** and **4 decoders** for each region of the brain, across **2 participants**. Using advanced sentence representations, such as **BERT CLS**, **BERT Pooled**, and **GloVe**, we trained models to handle fMRI data from different brain regions. Specifically:
 
-<h3>About the Dataset (Avail in the Assignment sheet)</h3>
+- **Ridge Regression Models** were used for both encoding and decoding.
+- We utilized **3 sentence representations**: BERT CLS, BERT Pooled, and GloVe.
+- This resulted in a total of **48 trained models**:
+  - 2 Participants × 4 Brain ROIs × 3 Sentence Representations × 2 (Encoder and Decoder) = 48 Models.
 
-Dataset consists of 627 sentences and the corresponding fMRI, recorded when the sentences were presented to a subject one by one. fMRI is provided for four different brain ROIS listed below:<br><br>
-• <strong>Language:</strong> Related to language processing, understanding, word meaning, and sentence
-comprehension. <br>
-• <strong>Vision:</strong> Related to the processing of visual objects, object recognition<rb>
-• <strong>Task Positive:</strong> Related to attention, salience information. <br>
-• <strong>Default Mode Network (DMN):</strong> Linked to the functionality of semantic processing.<br><br>
-Dataset contains three files:<br><br>
-• <strong>stimuli.txt:</strong> It contains 627 sentences, each in one line.<br>
-• <strong>subj1.npy:</strong> Contains fMRI data for Subject 1. Stored as a dictionary, with keys as the
-four brain regions and values as the corresponding fMRI for 627 sentences.<br>
-• <strong>subj2.npy:</strong> Contains fMRI data for Subject 2. Stored as a dictionary, with keys as the
-four brain regions and values as the corresponding fMRI for 627 sentences.
+We evaluated our models using **2v2 accuracy** and **Pearson’s Correlation**, both of which are computed using the following formulae.
 
-<h3>Files in Repository</h3>
-<strong>This is part of my Cognitive Science and AI course</strong>. The information about Problem statements, Links to dataset, stimuli are given in the pdf named 'Assignment' in this repository. 
-<br>
+![2v2 Accuracy Plot](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/48ce7c00-ff30-4991-b913-c6dbd992b90d)
 
-The analysis of the results is in the file named <strong>'Report'</strong>
-The solution code is in the ipynb file named <strong>'Code'</strong> and it is structured in the following way for both Encoder and Decoder Models: 
-<br><br> 
-![image](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/1fae2726-55f5-4b92-800c-d615b8228154)
+![Pearson's Correlation Plot](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/05c82ee1-3817-47d8-9dbf-20462087369e)
 
+## Dataset Description
+The dataset comprises **627 sentences** and the corresponding fMRI data recorded while these sentences were presented to participants. fMRI data is provided for four specific brain regions (ROIs):
 
+- **Language**: Associated with language processing, comprehension, and word meaning.
+- **Vision**: Related to visual object processing and recognition.
+- **Task Positive**: Linked to attention and salience information processing.
+- **Default Mode Network (DMN)**: Engaged in semantic processing and mind-wandering.
 
+### Dataset Files
+The dataset includes the following files:
 
+- **stimuli.txt**: Contains 627 sentences, one per line.
+- **subj1.npy**: fMRI data for Subject 1, organized as a dictionary with keys representing the brain regions and values containing fMRI data for each sentence.
+- **subj2.npy**: fMRI data for Subject 2, similarly structured as `subj1.npy`.
 
+## Repository Structure
+This project was developed as part of a **Cognitive Science and AI course**. The detailed problem statements, dataset information, and stimuli details are provided in the **'Assignment.pdf'** file.
+
+- **Analysis**: The results and analysis are documented in the **'Report'** file.
+- **Solution Code**: The implementation, including both encoder and decoder models, is available in the **'Code.ipynb'** file. The code is organized as follows:
+
+![Code Structure](https://github.com/guneeshvats/Textual-Brain-Encoding-and-Decoding/assets/70188630/1fae2726-55f5-4b92-800c-d615b8228154)
+
+We hope this project provides valuable insights into the intersection of fMRI image analysis and natural language processing.
